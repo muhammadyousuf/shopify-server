@@ -146,4 +146,7 @@ app.get('/refresh_token', function(req, res) {
 });
 
 console.log('Listening on 8888');
-app.listen(8888);
+var server = app.listen(process.env.PORT || 8888, function () {
+  var port = server.address().port;
+  console.log("Express is working on port " + port);
+});
