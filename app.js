@@ -16,7 +16,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = 'dcb4c20487454adf916ef46d322f68ea'; // Your client id
 var client_secret = 'd837aa5363cb4585951fdf59e6de778d'; // Your secret
-var redirect_uri = 'https://magicplaylist-95a64.web.app/callback'; // Your redirect uri
+var redirect_uri = 'https://shopify-server-list.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
