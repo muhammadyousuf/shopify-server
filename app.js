@@ -16,7 +16,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = 'dcb4c20487454adf916ef46d322f68ea'; // Your client id
 var client_secret = 'd837aa5363cb4585951fdf59e6de778d'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'https://magicplaylist-95a64.web.app/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -106,13 +106,13 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('http://localhost:8000/#' +
+        res.redirect('https://magicplaylist-95a64.web.app/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
           }));
       } else {
-        res.redirect('http://localhost:8000/#' +
+        res.redirect('https://magicplaylist-95a64.web.app/#' +
           querystring.stringify({
             error: 'invalid_token'
           }));
